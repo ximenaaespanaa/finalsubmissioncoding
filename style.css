@@ -1,0 +1,178 @@
+/* Apply a background image with a fallback color */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f2; /* Soft pink background */
+  background-image: url('your-background-image-url.jpg');
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center center;
+  background-repeat: no-repeat; /* Don't repeat the background image */
+  height: 100vh; /* Ensure body takes up full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Make sure it behaves correctly with absolute positioning inside */
+}
+
+/* Canvas Style */
+canvas {
+  display: block; /* Remove inline-block behavior */
+  margin: 0 auto; /* Center horizontally */
+  position: absolute; /* Position it absolutely relative to the body */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust to center it perfectly */
+  z-index: 1; /* Ensure the canvas is layered below the buttons */
+}
+
+/* Base Style for All Start Buttons */
+.start-button {
+  background-color: #FF66B2;
+  color: white;
+  width: 150px;
+  height: 50px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed; /* Keeps button in place */
+  z-index: 2; /* Ensure button is above other elements */
+  cursor: pointer;
+}
+
+/* Landing Page Start Button (Centered) */
+.landing-button {
+  top: 56%; /* Adjust vertical position */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+}
+
+/* Welcome Page Start Button (Different Position) */
+.welcome-button {
+  top: 60%; /* Slightly lower */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start-button:hover {
+  background-color: #FF99CC;
+}
+
+/* Snap Button */
+.snap-button {
+  background-color: #E91E63;
+  color: rgb(255,255,255);
+  width: 180px;
+  height: 60px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5; /* Ensure the button appears above the canvas */
+}
+
+.snap-button:hover {
+  background-color: #FF7DA9;
+}
+
+/* Save Button */
+.save-button {
+  background-color: #E91E63;
+  color: black;
+  width: 180px;
+  height: 60px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 5; /* Ensure the button appears above the canvas */
+}
+
+.save-button:hover {
+  background-color: #FF7DA9;
+}
+
+/* Style for the filter buttons container */
+.filter-buttons-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Center the buttons vertically */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the container within the window */
+  gap: 20px; /* Space between the buttons */
+  z-index: 10; /* Ensure it's above other content */
+}
+
+/* Style for the individual filter buttons */
+.filter-button {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #E91E63;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.filter-button:hover {
+  background-color: #FF7DA9;
+}
+
+/* Filter buttons appear with a smooth transition */
+.filter-button.visible {
+  opacity: 1;
+}
+
+/* Retake Button */
+.retake-button {
+  background-color: #E91E63;
+  color: white;
+  width: 180px;
+  height: 60px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  position: absolute;
+  top: 80%; /* Position it just below the Save button */
+  left: 60%;
+  transform: translateX(-50%);
+  z-index: 5; /* Ensure the button appears above the canvas */
+}
+
+.retake-button:hover {
+  background-color: #FF7DA9;
+}
+
+/* Home Button Style */
+.back-button {
+  background-color: #ff4c94; /* Pink background */
+  color: white; /* White text */
+  font-size: 18px; /* Text size */
+  padding: 10px 20px; /* Padding for a bigger button */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.back-button:hover {
+  background-color: #FF7DA9; /* Slightly darker pink when hovered */
+}
+
+.back-button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+
